@@ -10,19 +10,9 @@ SOLUTION
 
 public String everyNth(String str, int n) {
   String result = "";
-  int temp = 0;
   
-  for(int i = 0; i < str.length(); i++) {
-    if (i == 0) {
-      
-      result += str.charAt(0);
-      temp = n;
-      
-    } else if (temp < str.length()) {
-      
-      result += str.charAt(temp);
-      temp += n;
-    }
+  for(int i = 0; i < str.length(); i += n) {
+    result += str.charAt(i);
   }
   
   return result;
